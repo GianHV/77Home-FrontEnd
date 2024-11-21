@@ -28,8 +28,8 @@ const ListHouse = () => {
 
   const [selectedStatus, setSelectedStatus] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
-  const [isOpenModalDelete, setOpenModalDelete] = useState(false);
-  const [houseData, setHouseData] = useState([]);
+  const [isOpenModalDelete , setOpenModalDelete] = useState(false);
+  const [houseData , setHouseData] = useState([]);
   const itemsPerPage = 3;
 
   const offset = currentPage * itemsPerPage;
@@ -57,7 +57,7 @@ const ListHouse = () => {
       setWardList(res.data.data);
     }
   };
-
+  
   const fetchAllListHouse = async () => {
     const res = await axios.get("http://localhost:3000/houses");
     if (res && res.data) {

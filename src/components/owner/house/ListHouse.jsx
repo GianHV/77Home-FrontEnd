@@ -324,12 +324,7 @@ const ListHouse = () => {
       <Row className="mt-5">
         {currentItems && currentItems.length > 0 ? (
           currentItems.map((house, index) => (
-            <Col
-              md={12}
-              key={house.id}
-              className="mb-3"
-              onClick={() => handleViewDetail(house.id)}
-            >
+            <Col md={12} key={house.id} className="mb-3">
               <Card className="p-3">
                 <Row>
                   <Col md={4}>
@@ -338,6 +333,7 @@ const ListHouse = () => {
                       src={house.image}
                       alt={`Hình ảnh của ${house.name}`}
                       className="image-house"
+                      onClick={() => handleViewDetail(house.id)}
                     />
                   </Col>
                   <Col md={8} className="text-start">

@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import ListHouse from "./components/owner/ListHouse";
 import DetailHouse from "./components/owner/DetailHouse";
 import UpdateHouse from "./components/owner/UpdateHouse";
+import Login from "./components/user/Login";
 const Layout = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const Layout = () => {
             <Route path="update" element={<UpdateHouse />} />
             <Route path=":id" element={<DetailHouse />} />
           </Route>
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Suspense>
     </div>

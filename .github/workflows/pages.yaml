@@ -25,9 +25,9 @@ jobs:
       - name: Install NPM Dependencies
         run: npm i
       - name: Start JSON Server
-        run: |
+        run: 
           cd src
-          nohup npx json-server --watch db.json &
+          json-server --watch db.json &
       - name: Build Project
         run: npm run build
       - name: Upload artifact in order to deploy

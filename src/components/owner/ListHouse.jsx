@@ -57,7 +57,7 @@ const ListHouse = () => {
       setWardList(res.data.data);
     }
   };
-  
+
   const fetchAllListHouse = async () => {
     const res = await axios.get("http://localhost:3000/houses");
     if (res && res.data) {
@@ -109,23 +109,15 @@ const ListHouse = () => {
     setCurrentPage(0);
   };
 
-    const handleTongleModalConfirm = () => {
-    setOpenModalDelete(!isOpenModalDelete);
-  };
-   const handleDeleteHouse = (house) => {
-    handleTongleModalConfirm(isOpenModalDelete);
-   setHouseData(house)
-  };
-  const handleViewDetail = (houseId) => {
-    navigate(`/house/${houseId}`);
-  };
-
   const handleTongleModalConfirm = () => {
     setOpenModalDelete(!isOpenModalDelete);
   };
   const handleDeleteHouse = (house) => {
     handleTongleModalConfirm(isOpenModalDelete);
     setHouseData(house);
+  };
+  const handleViewDetail = (houseId) => {
+    navigate(`/house/${houseId}`);
   };
 
   return (

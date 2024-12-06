@@ -16,14 +16,14 @@ const Layout = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path={`/${url}`} element={<App />} />
-          <Route path={`/${url}/house`} element={<ManageHouse />}>
+          <Route path={`/house`} element={<ManageHouse />}>
             <Route index element={<ListHouse />} />
             <Route path={`create`} element={<CreateNewHouse />} />
             <Route path={`update`} element={<UpdateHouse />} />
             <Route path={`:id`} element={<DetailHouse />} />
           </Route>
-          <Route path={`/${url}/login`} element={<Login />} />
-          <Route path={`/${url}/register`} element={<Register />} />
+          <Route path={`/login`} element={<Login />} />
+          <Route path={`/register`} element={<Register />} />
         </Routes>
       </Suspense>
     </div>

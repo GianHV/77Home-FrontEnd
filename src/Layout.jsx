@@ -15,8 +15,8 @@ const Layout = () => {
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path={`/${url}`} element={<App />} />
-          <Route path={`/${url}/house`} element={<ManageHouse />}>
+          {/* <Route path={`/${url}`} element={<App />} /> */}
+          <Route path={`/${url}`} element={<ManageHouse />}>
             <Route index element={<ListHouse />} />
             <Route path={`create`} element={<CreateNewHouse />} />
             <Route path={`update`} element={<UpdateHouse />} />
